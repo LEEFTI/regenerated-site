@@ -4,115 +4,197 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Regenerated.com - Find Trusted Regenerative Health Clinics</title>
-    <meta name="description" content="Regenerated.com is the largest directory of regenerative health clinics in the US. Find vetted clinics offering stem cell therapy, HBOT, peptide therapy, IV therapy, PRP, and more.">
+    <meta name="description" content="Regenerated.com is the largest directory of regenerative health clinics in the US. Search 10,000+ vetted clinics offering stem cell therapy, HBOT, peptide therapy, PRP, IV therapy, and more.">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://leefti.github.io/regenerated-site/">
     <meta property="og:title" content="Regenerated.com - Trusted Regenerative Health Clinic Directory">
-    <meta property="og:description" content="Find 10,000+ vetted regenerative health clinics across the US. Stem cells, HBOT, peptides, and more.">
+    <meta property="og:description" content="Search 10,000+ vetted regenerative health clinics across all 50 US states.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://leefti.github.io/regenerated-site/">
     <style>
+        :root {
+            --primary: #14532d;
+            --accent: #22c55e;
+            --accent-dark: #16a34a;
+            --accent-light: #dcfce7;
+            --text: #1e293b;
+            --text-light: #64748b;
+            --bg: #f0fdf4;
+            --card-bg: #ffffff;
+            --border: #bbf7d0;
+        }
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            color: #1a1a1a;
-            line-height: 1.7;
-            background: #fafafa;
-        }
-        header {
-            background: linear-gradient(135deg, #14532d, #22863a);
-            color: white;
-            padding: 60px 20px;
-            text-align: center;
-        }
-        header h1 { font-size: 2.4rem; margin-bottom: 12px; }
-        header p { font-size: 1.15rem; opacity: 0.9; max-width: 640px; margin: 0 auto; }
-        main { max-width: 780px; margin: 0 auto; padding: 40px 20px 60px; }
-        h2 { font-size: 1.5rem; margin: 36px 0 16px; color: #14532d; }
-        h3 { font-size: 1.2rem; margin: 24px 0 10px; color: #166534; }
-        p { margin-bottom: 16px; color: #333; }
-        ul { margin: 0 0 20px 24px; }
-        li { margin-bottom: 8px; color: #333; }
-        a { color: #16a34a; text-decoration: none; }
+        body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; color: var(--text); line-height: 1.7; background: var(--bg); }
+        a { color: var(--primary); text-decoration: none; font-weight: 500; }
         a:hover { text-decoration: underline; }
-        .stats {
-            display: flex;
-            justify-content: center;
-            gap: 40px;
-            margin: 30px 0;
-            flex-wrap: wrap;
+
+        .hero {
+            background: linear-gradient(135deg, #14532d 0%, #166534 50%, #15803d 100%);
+            color: white;
+            padding: 80px 24px 60px;
+            text-align: center;
         }
+        .hero-badge { display: inline-block; background: rgba(255,255,255,0.15); color: var(--accent-light); font-size: 0.8rem; font-weight: 600; padding: 6px 16px; border-radius: 20px; margin-bottom: 20px; letter-spacing: 0.5px; text-transform: uppercase; }
+        .hero h1 { font-size: 2.8rem; font-weight: 800; margin-bottom: 16px; letter-spacing: -0.5px; }
+        .hero p { font-size: 1.15rem; opacity: 0.85; max-width: 600px; margin: 0 auto; }
+
+        .container { max-width: 860px; margin: 0 auto; padding: 0 24px; }
+        .section { padding: 48px 0; }
+        .section-title { font-size: 1.6rem; font-weight: 700; color: var(--primary); margin-bottom: 8px; }
+        .section-sub { color: var(--text-light); margin-bottom: 28px; }
+
+        .stats-bar { display: flex; justify-content: center; gap: 48px; padding: 32px 0; flex-wrap: wrap; }
         .stat { text-align: center; }
-        .stat-number { font-size: 2rem; font-weight: 700; color: #14532d; }
-        .stat-label { font-size: 0.9rem; color: #666; }
-        .cta {
-            background: linear-gradient(135deg, #14532d, #22863a);
+        .stat-num { font-size: 2.2rem; font-weight: 800; color: white; }
+        .stat-label { font-size: 0.85rem; opacity: 0.75; margin-top: 4px; }
+
+        .card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; margin-bottom: 32px; }
+        .card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 24px;
+            transition: box-shadow 0.2s, transform 0.2s;
+        }
+        .card:hover { box-shadow: 0 4px 20px rgba(20,83,45,0.1); transform: translateY(-2px); }
+        .card h3 { font-size: 1rem; font-weight: 700; color: var(--primary); margin-bottom: 8px; }
+        .card p { font-size: 0.9rem; color: var(--text-light); margin-bottom: 12px; }
+        .card a { font-size: 0.85rem; color: var(--accent-dark); font-weight: 600; }
+
+        .content-block { background: var(--card-bg); border: 1px solid var(--border); border-radius: 12px; padding: 32px; margin-bottom: 24px; }
+        .content-block h2 { font-size: 1.3rem; font-weight: 700; color: var(--primary); margin-bottom: 12px; }
+        .content-block p { margin-bottom: 14px; }
+
+        .link-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 10px; margin: 20px 0; }
+        .link-item { background: var(--bg); border: 1px solid var(--border); border-radius: 8px; padding: 14px 16px; font-size: 0.9rem; }
+        .link-item a { font-weight: 600; }
+
+        .cta-banner {
+            background: linear-gradient(135deg, #14532d, #166534);
             color: white;
             text-align: center;
-            padding: 40px 20px;
-            margin-top: 40px;
-            border-radius: 8px;
+            padding: 48px 24px;
+            border-radius: 16px;
+            margin: 32px 0;
         }
-        .cta a { color: #bbf7d0; font-size: 1.2rem; font-weight: 600; }
-        footer { text-align: center; padding: 30px; color: #888; font-size: 0.85rem; }
+        .cta-banner h2 { font-size: 1.6rem; font-weight: 700; margin-bottom: 12px; }
+        .cta-banner p { opacity: 0.8; margin-bottom: 20px; }
+        .cta-btn { display: inline-block; background: var(--accent); color: var(--primary); font-weight: 700; padding: 14px 32px; border-radius: 8px; font-size: 1rem; text-decoration: none; }
+        .cta-btn:hover { background: var(--accent-dark); color: white; text-decoration: none; }
+
+        footer { text-align: center; padding: 40px 24px; color: var(--text-light); font-size: 0.8rem; border-top: 1px solid var(--border); }
     </style>
 </head>
 <body>
-    <header>
+    <div class="hero">
+        <div class="hero-badge">Regenerative Medicine Directory</div>
         <h1>Regenerated.com</h1>
-        <p>The largest directory of regenerative health clinics in the United States. Find trusted providers for stem cell therapy, HBOT, peptides, and more.</p>
-    </header>
-    <main>
-        <div class="stats">
-            <div class="stat">
-                <div class="stat-number">10,000+</div>
-                <div class="stat-label">Clinics Listed</div>
+        <p>The largest directory of regenerative health clinics in the United States. Find vetted providers offering cutting-edge treatments.</p>
+        <div class="stats-bar">
+            <div class="stat"><div class="stat-num">10,000+</div><div class="stat-label">Clinics Listed</div></div>
+            <div class="stat"><div class="stat-num">73</div><div class="stat-label">Treatments</div></div>
+            <div class="stat"><div class="stat-num">26</div><div class="stat-label">Conditions</div></div>
+            <div class="stat"><div class="stat-num">50</div><div class="stat-label">US States</div></div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="section">
+            <div class="section-title">Browse by Treatment</div>
+            <div class="section-sub">Find clinics by the regenerative therapies they offer.</div>
+
+            <div class="card-grid">
+                <div class="card">
+                    <h3>Stem Cell Therapy</h3>
+                    <p>Autologous and allogeneic stem cell treatments for orthopedic injuries, autoimmune conditions, and neurological disorders.</p>
+                    <a href="https://regenerated.com/treatments/stem-cell-therapy">Find clinics &rarr;</a>
+                </div>
+                <div class="card">
+                    <h3>Hyperbaric Oxygen Therapy</h3>
+                    <p>Pressurized oxygen treatment for wound healing, TBI recovery, neurological conditions, and systemic inflammation.</p>
+                    <a href="https://regenerated.com/treatments/hyperbaric-oxygen-therapy">Find clinics &rarr;</a>
+                </div>
+                <div class="card">
+                    <h3>Peptide Therapy</h3>
+                    <p>Targeted peptide protocols including BPC-157, thymosin beta-4, and sermorelin for tissue repair, immune support, and optimization.</p>
+                    <a href="https://regenerated.com/treatments/peptide-therapy">Find clinics &rarr;</a>
+                </div>
+                <div class="card">
+                    <h3>IV Therapy and NAD+</h3>
+                    <p>Intravenous nutrient delivery and NAD+ infusions for cellular energy, detoxification, and anti-aging protocols.</p>
+                    <a href="https://regenerated.com/treatments/iv-therapy">Find clinics &rarr;</a>
+                </div>
+                <div class="card">
+                    <h3>PRP Therapy</h3>
+                    <p>Platelet-rich plasma injections that concentrate your own growth factors to accelerate healing in joints, tendons, and tissues.</p>
+                    <a href="https://regenerated.com/treatments/prp-therapy">Find clinics &rarr;</a>
+                </div>
+                <div class="card">
+                    <h3>Ozone Therapy</h3>
+                    <p>Medical ozone for immune modulation, antimicrobial action, and enhanced oxygen utilization in chronic conditions.</p>
+                    <a href="https://regenerated.com/treatments/ozone-therapy">Find clinics &rarr;</a>
+                </div>
             </div>
-            <div class="stat">
-                <div class="stat-number">73</div>
-                <div class="stat-label">Treatments Covered</div>
-            </div>
-            <div class="stat">
-                <div class="stat-number">50</div>
-                <div class="stat-label">US States</div>
+
+            <div class="content-block">
+                <h2>All Treatments</h2>
+                <div class="link-grid">
+                    <div class="link-item"><a href="https://regenerated.com/treatments/exosome-therapy">Exosome Therapy</a></div>
+                    <div class="link-item"><a href="https://regenerated.com/treatments/ketamine-therapy">Ketamine Therapy</a></div>
+                    <div class="link-item"><a href="https://regenerated.com/treatments/red-light-therapy">Red Light Therapy</a></div>
+                    <div class="link-item"><a href="https://regenerated.com/treatments/prolotherapy">Prolotherapy</a></div>
+                    <div class="link-item"><a href="https://regenerated.com/treatments/hormone-therapy">Hormone Therapy</a></div>
+                    <div class="link-item"><a href="https://regenerated.com/treatments/functional-medicine">Functional Medicine</a></div>
+                    <div class="link-item"><a href="https://regenerated.com/treatments">View All 73 Treatments &rarr;</a></div>
+                </div>
             </div>
         </div>
 
-        <h2>What Is Regenerative Medicine?</h2>
-        <p>Regenerative medicine is a branch of healthcare focused on repairing, replacing, or regenerating damaged cells, tissues, and organs to restore normal function. Unlike conventional medicine that often manages symptoms, regenerative therapies aim to address root causes by harnessing the body's own healing mechanisms or introducing biological materials that stimulate repair.</p>
-        <p>The field spans a wide range of treatments, from well-established therapies like platelet-rich plasma (PRP) injections to cutting-edge approaches like exosome therapy and mesenchymal stem cell treatments. As research advances and clinical evidence grows, regenerative medicine is becoming an increasingly important option for patients with chronic conditions, autoimmune disorders, degenerative diseases, and injuries that haven't responded to conventional treatment.</p>
-
-        <h2>Treatments You Can Find on Regenerated.com</h2>
-
-        <h3>Stem Cell Therapy</h3>
-        <p>Stem cell treatments use the body's master cells to repair damaged tissue. Clinics offer autologous (your own cells) and allogeneic (donor) stem cell therapies for orthopedic injuries, autoimmune conditions, neurological disorders, and anti-aging protocols. Common sources include bone marrow, adipose tissue, and umbilical cord-derived mesenchymal stem cells.</p>
-
-        <h3>Hyperbaric Oxygen Therapy (HBOT)</h3>
-        <p>HBOT delivers 100% oxygen at increased atmospheric pressure, driving oxygen deep into tissues to accelerate healing, reduce inflammation, and promote new blood vessel growth. FDA-cleared for 14 conditions including wound healing and decompression sickness, with growing research supporting its use in TBI, Long COVID, and neurological conditions.</p>
-
-        <h3>Peptide Therapy</h3>
-        <p>Peptides are short chains of amino acids that signal specific biological processes. Therapeutic peptides like BPC-157 (gut and tissue repair), thymosin beta-4 (wound healing), and sermorelin (growth hormone secretion) are used by regenerative clinics to target inflammation, recovery, immune function, and cellular repair.</p>
-
-        <h3>IV Therapy and NAD+</h3>
-        <p>Intravenous nutrient therapy delivers vitamins, minerals, amino acids, and compounds like NAD+ directly into the bloodstream for maximum absorption. NAD+ infusions in particular have gained attention for their role in cellular energy production, DNA repair, and age-related decline.</p>
-
-        <h3>PRP and Prolotherapy</h3>
-        <p>Platelet-rich plasma therapy concentrates your blood's growth factors and injects them into injured areas to accelerate healing. Prolotherapy uses dextrose or other solutions to trigger a controlled inflammatory response that stimulates tissue repair. Both are commonly used for joint pain, tendon injuries, and musculoskeletal conditions.</p>
-
-        <h3>Additional Therapies</h3>
-        <p>Regenerated.com also lists clinics offering ozone therapy, exosome therapy, red light and photobiomodulation therapy, ketamine-assisted therapy, functional medicine, hormone optimization, and dozens of other regenerative and integrative treatments.</p>
-
-        <h2>Why Regenerated.com Exists</h2>
-        <p>Finding a trustworthy regenerative health clinic is difficult. The industry is fragmented, quality varies dramatically, and patients often spend weeks researching before feeling confident in their choice. Regenerated.com solves this by aggregating clinic data, verifying credentials, and presenting standardized profiles that make it easy to compare providers, treatments, and patient reviews in one place.</p>
-        <p>Every clinic on the platform is checked against public databases including the OIG exclusion list and state medical boards. Verified and partner clinics undergo additional manual vetting to ensure they meet the platform's quality standards.</p>
-
-        <div class="cta">
-            <p>Search 10,000+ regenerative health clinics across the US.</p>
-            <p><a href="https://regenerated.com">Visit Regenerated.com</a></p>
+        <div class="section">
+            <div class="section-title">Browse by Condition</div>
+            <div class="section-sub">Find clinics that specialize in treating your condition.</div>
+            <div class="link-grid">
+                <div class="link-item"><a href="https://regenerated.com/conditions/chronic-pain">Chronic Pain</a></div>
+                <div class="link-item"><a href="https://regenerated.com/conditions/autoimmune-diseases">Autoimmune Diseases</a></div>
+                <div class="link-item"><a href="https://regenerated.com/conditions/traumatic-brain-injury">Traumatic Brain Injury</a></div>
+                <div class="link-item"><a href="https://regenerated.com/conditions/long-covid">Long COVID</a></div>
+                <div class="link-item"><a href="https://regenerated.com/conditions/lyme-disease">Lyme Disease</a></div>
+                <div class="link-item"><a href="https://regenerated.com/conditions/multiple-sclerosis">Multiple Sclerosis</a></div>
+                <div class="link-item"><a href="https://regenerated.com/conditions/erectile-dysfunction">Erectile Dysfunction</a></div>
+                <div class="link-item"><a href="https://regenerated.com/conditions/fibromyalgia">Fibromyalgia</a></div>
+                <div class="link-item"><a href="https://regenerated.com/conditions/arthritis">Arthritis</a></div>
+                <div class="link-item"><a href="https://regenerated.com/conditions/neuropathy">Neuropathy</a></div>
+                <div class="link-item"><a href="https://regenerated.com/conditions">View All 26 Conditions &rarr;</a></div>
+            </div>
         </div>
-    </main>
+
+        <div class="content-block">
+            <h2>How Regenerated.com Vets Clinics</h2>
+            <p>Every clinic on the platform is checked against public databases including the OIG exclusion list and state medical boards. Verified clinics undergo manual review of credentials, treatment offerings, patient reviews, and facility standards. The vetting process ensures patients can trust the clinics they find on the directory.</p>
+            <p><a href="https://regenerated.com/about/how-we-vet-clinics">Learn how we vet clinics &rarr;</a></p>
+        </div>
+
+        <div class="content-block">
+            <h2>About Regenerated.com</h2>
+            <p>Regenerated.com was built because finding a trustworthy regenerative health clinic shouldn't require weeks of research. The directory aggregates clinic data from across the US, standardizes profiles, and gives patients a single place to compare providers, treatments offered, patient reviews, and credentials.</p>
+            <p>Whether you're exploring stem cell therapy for a joint injury, HBOT for post-concussion recovery, or peptide therapy for systemic inflammation, Regenerated.com connects you with clinics that have been reviewed against the platform's quality standards.</p>
+            <div class="link-grid">
+                <div class="link-item"><a href="https://regenerated.com/about/our-why">Our Why</a></div>
+                <div class="link-item"><a href="https://regenerated.com/about/about-regeneratedcom">About Us</a></div>
+                <div class="link-item"><a href="https://regenerated.com/for-clinics">For Clinics</a></div>
+                <div class="link-item"><a href="https://regenerated.com/contributors">Contributors</a></div>
+            </div>
+        </div>
+
+        <div class="cta-banner">
+            <h2>Find Your Clinic</h2>
+            <p>Search 10,000+ regenerative health clinics across all 50 US states.</p>
+            <a href="https://regenerated.com/clinics" class="cta-btn">Search Clinics on Regenerated.com</a>
+        </div>
+    </div>
+
     <footer>
-        <p>&copy; 2026 Regenerated.com. All rights reserved.</p>
+        <p>&copy; 2026 Regenerated.com. All rights reserved. | <a href="https://regenerated.com/about/about-regeneratedcom">About</a> | <a href="https://regenerated.com/contact">Contact</a> | <a href="https://regenerated.com/privacy-policy">Privacy</a> | <a href="https://regenerated.com/terms-of-service">Terms</a></p>
     </footer>
 </body>
 </html>
